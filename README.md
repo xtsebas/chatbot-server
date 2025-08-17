@@ -178,7 +178,3 @@ ENTRYPOINT ["python", "-m", "mcp_server.server"]
 - **0.1.0** — Initial public version (STDIO server, `engine.py`, `spec.json`).
 
 ---
-
-## License
-
-MIT (or the license of your choice). Update this section as needed.
