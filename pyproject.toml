@@ -1,0 +1,16 @@
+[project]
+name = "mcp-wordle-coach"
+version = "0.1.0"
+description = "MCP server: Wordle Coach (entropy-based suggestions for 5-letter Wordle)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name="Sebas"}]
+
+dependencies = []
+
+[project.scripts]
+mcp-wordle-coach = "mcp_wordle_coach.server:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
