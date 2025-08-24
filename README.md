@@ -23,3 +23,14 @@ Servidor **MCP** (Model Context Protocol) que resuelve **Wordle** por **entropí
 python -m venv .venv && source .venv/bin/activate # (Windows: .venv\Scripts\activate)
 pip install -r requirements.txt
 playwright install # para el scraper
+```
+
+### Para correr demo
+```bash
+mcp dev server.py
+```
+
+### Para correr stdio
+```bash
+python3 server.py stdio
+```
