@@ -10,7 +10,7 @@ authors = [{name="Sebas"}]
 dependencies = []
 
 [project.scripts]
-mcp-wordle-coach = "mcp_wordle_coach.server:main"
+mcp-wordle-coach = "mcp_wordle_coach.src.mcp_server.server:main"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
