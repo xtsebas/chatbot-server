@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcp-wordle-coach"
-version = "0.1.0"
+version = "0.1.1"  # ← súbelo para forzar rebuild en uvx
 description = "MCP server: Wordle Coach (entropy-based suggestions for 5-letter Wordle)"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -13,11 +13,10 @@ authors = [{ name = "Sebas" }]
 dependencies = []
 
 [project.scripts]
-# el ejecutable "mcp-wordle-coach" llamará a mcp_server.server:main
 mcp-wordle-coach = "mcp_server.server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
-[tool.pytest.ini_options]
-pythonpath = ["."]
+[tool.setuptools.package-data]
+mcp_server = ["words.txt", "spec.json"]

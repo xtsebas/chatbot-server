@@ -4,6 +4,7 @@ import json
 import os
 import sys
 from typing import Dict, Tuple, List, Optional
+from importlib.resources import files
 
 from .engine import (
     pattern_for_guess,
@@ -16,9 +17,9 @@ from .engine import (
 VERSION = "0.1.0"
 WORDS_PATH = os.path.join(os.path.dirname(__file__), "words.txt")
 
-def load_words() -> List[str]:
-    with open(WORDS_PATH, "r", encoding="utf-8") as f:
-        return [w.strip().lower() for w in f if len(w.strip()) == 5 and w.strip().isalpha()]
+def load_words():
+    txt = files("mcp_server").joinpath("words.txt").read_text(encoding="utf-8")
+    return [w.strip() for w in txt.splitlines() if w.strip()]
 
 ALL_WORDS = load_words()
 
