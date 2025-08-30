@@ -126,6 +126,15 @@ Configure your preferred MCP host to run a **STDIO server** with:
 The server responds with `{"jsonrpc":"2.0","id":<id>,"result":...}` or `{"error":...}`.
 
 ---
+## Try a MCP remote
+**connect to a finance MCP with this url**
+
+```bash
+https://finance-mcp.finance-xtsebas74.workers.dev/regla_503020
+```
+
+And try the tool for the 50-30-20 rule  
+--
 
 ## Troubleshooting
 
